@@ -1,5 +1,4 @@
 @import url("normalize.css");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Poiret+One&display=swap");
 
 /* Basic */
 @-ms-viewport {
@@ -44,15 +43,7 @@ body {
   justify-content: center;
 }
 
-@media screen and (max-height: 640px) {
-  html,
-  body {
-    height: auto;
-    min-height: 100%;
-  }
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 560px) {
   html,
   body {
     min-width: 320px;
@@ -71,21 +62,25 @@ body {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 400px) {
   body {
     padding: 5em 1.25em 1.25em 1.25em;
   }
 }
 
-/* Header */
-
-#header {
-  margin-bottom: 5em;
+@media screen and (max-height: 540px) {
+  html,
+  body {
+    height: auto;
+    min-height: 100%;
+  }
 }
+
+/* Main */
 
 #header h1 {
   font-family: "Poiret One", cursive;
-  font-size: 6em;
+  font-size: 4em;
   color: #263238;
   margin: 0;
 }
@@ -94,7 +89,62 @@ body {
   font-size: 2em;
 }
 
-@media screen and (max-width: 736px) {
+#message {
+  min-height: 2.4em;
+}
+
+#charlie {
+  width: 180px;
+  margin-left: 300px;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 560px) {
+  #header {
+    margin: 0 0 1em 0;
+  }
+
+  #header h1 {
+    font-size: 3em;
+  }
+
+  #header p {
+    font-size: 1.5em;
+  }
+
+  #charlie {
+    width: 150px;
+    float: right;
+    margin-left: 0;
+    margin-right: 40px;
+    margin-bottom: 75px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #header h1 {
+    font-size: 2.4em;
+  }
+
+  #header p {
+    font-size: 1.2em;
+  }
+
+  #charlie {
+    width: 120px;
+    float: right;
+    margin-left: 0;
+    margin-right: 20px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-height: 540px) {
+  #header {
+    float: left;
+    width: 280px;
+  }
+
   #header h1 {
     font-size: 2em;
   }
@@ -102,11 +152,13 @@ body {
   #header p {
     font-size: 1em;
   }
-}
 
-@media screen and (max-width: 480px) {
-  #header {
-    margin: 0 0 1em 0;
+  #charlie {
+    float: right;
+    width: 150px;
+    margin-left: 0;
+    margin-right: 20px;
+    margin-bottom: 0;
   }
 }
 
@@ -173,16 +225,7 @@ body {
   }
 }
 
-@media screen and (max-height: 640px) {
-  #footer {
-    bottom: auto;
-    left: auto;
-    margin: 1em 0 0 0;
-    position: relative;
-  }
-}
-
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 400px) {
   #footer {
     bottom: 1.25em;
     left: 1.25em;
