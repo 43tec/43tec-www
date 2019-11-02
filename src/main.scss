@@ -1,0 +1,265 @@
+/* Constants */
+$bp-xs-sm: 600px;
+$bp-sm-md: 900px;
+$bp-md-lg: 1200px;
+$bp-lg-xl: 1800px;
+$primary-color: #263238;
+
+/* Responsive Breakpoints */
+@mixin for-phone-portrait-only {
+  @media (max-width: $bp-xs-sm - 1px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin for-phone-landscape-only {
+  @media (max-height: $bp-xs-sm - 1px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: $bp-xs-sm) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: $bp-sm-md) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: $bp-md-lg) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: $bp-lg-xl) {
+    @content;
+  }
+}
+
+/* Flex Box */
+@mixin flex {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+@mixin flex-direction($property) {
+  -moz-flex-direction: $property;
+  -webkit-flex-direction: $property;
+  -ms-flex-direction: $property;
+  flex-direction: $property;
+}
+
+@mixin justify-content($property) {
+  -moz-justify-content: $property;
+  -webkit-justify-content: $property;
+  -ms-justify-content: $property;
+  justify-content: $property;
+}
+
+@mixin align-items($property) {
+  -moz-align-items: $property;
+  -webkit-align-items: $property;
+  -ms-align-items: $property;
+  align-items: $property;
+}
+
+/* Base */
+@-ms-viewport {
+  width: device-width;
+}
+
+body {
+  -ms-overflow-style: scrollbar;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+  color: $primary-color;
+  background-color: $primary-color;
+}
+
+body {
+  @include flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+/* Main */
+#container {
+  position: relative;
+  height: 100%;
+  background-color: #ffffff;
+  @include for-phone-portrait-only {
+    width: 100%;
+    min-width: 320px;
+    padding: 5em 1.25em 1.25em 1.25em;
+  }
+  @include for-phone-landscape-only {
+    height: auto;
+    padding: 5em 1.25em 1.25em 1.25em;
+  }
+  @include for-tablet-portrait-up {
+    width: $bp-xs-sm;
+    padding: 5em 2.5em 2em 2.5em;
+  }
+  @include for-tablet-landscape-up {
+    width: $bp-sm-md;
+    padding: 5em 4em 2em 4em;
+  }
+  @include for-desktop-up {
+    width: $bp-md-lg;
+    padding: 5em 5em 3em 5em;
+  }
+  @include for-big-desktop-up {
+    width: $bp-lg-xl;
+    padding: 5em 6em 4em 6em;
+  }
+}
+
+#header h1 {
+  font-family: "Poiret One", cursive;
+  margin: 0.5em 0;
+  @include for-phone-portrait-only {
+    font-size: 2.4em;
+  }
+  @include for-phone-landscape-only {
+    font-size: 2.4em;
+  }
+  @include for-tablet-portrait-up {
+    font-size: 3em;
+  }
+  @include for-tablet-landscape-up {
+    font-size: 4em;
+  }
+  @include for-desktop-up {
+    font-size: 5em;
+  }
+  @include for-big-desktop-up {
+    font-size: 6em;
+  }
+}
+
+#message {
+  min-height: 2.4em;
+  margin: 0.5em 0;
+  @include for-phone-portrait-only {
+    font-size: 1.2em;
+  }
+  @include for-phone-landscape-only {
+    font-size: 1.2em;
+  }
+  @include for-tablet-portrait-up {
+    font-size: 1.5em;
+  }
+  @include for-tablet-landscape-up {
+    font-size: 2em;
+  }
+  @include for-desktop-up {
+    font-size: 2.5em;
+  }
+  @include for-big-desktop-up {
+    font-size: 3em;
+  }
+}
+
+#contents {
+  @include flex;
+  @include flex-direction(column);
+  @include align-items(center);
+}
+
+#charlie {
+  @include for-phone-portrait-only {
+    width: 120px;
+  }
+  @include for-phone-landscape-only {
+    width: 120px;
+    margin-bottom: 100px;
+  }
+  @include for-tablet-portrait-up {
+    width: 150px;
+  }
+  @include for-tablet-landscape-up {
+    width: 150px;
+  }
+  @include for-desktop-up {
+    width: 180px;
+  }
+  @include for-big-desktop-up {
+    width: 180px;
+  }
+}
+
+/* Footer */
+footer .icons {
+  list-style: none;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+
+footer li {
+  display: inline;
+  margin-right: 0.8em;
+  opacity: 0.6;
+}
+
+footer li.icon:hover {
+  opacity: 1;
+}
+
+footer .icon a {
+  display: inline;
+  color: inherit;
+}
+
+footer .copyright {
+  font-size: 0.9em;
+  list-style: none;
+  padding: 0;
+}
+
+footer .copyright li {
+  line-height: 1em;
+  margin: 0 0 0 0.75em;
+  padding: 0 0 0 0.75em;
+}
+
+footer .copyright li:first-child {
+  border-left: 0;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+footer > :last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: inherit;
+}

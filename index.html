@@ -29,44 +29,50 @@
       rel="stylesheet"
     />
     <link href="assets/css/fontawesome.css" rel="stylesheet" />
+    <link href="assets/css/normalize.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="manifest" href="favicons/site.webmanifest" />
     <script src="assets/js/main.js"></script>
   </head>
 
   <body class="is-preload">
-    <!-- Main -->
-    <div id="main">
-      <header id="header">
-        <h1>43 technologies</h1>
-        <p id="message"></p>
-      </header>
-      <img id="charlie" src="assets/images/charlie.png" alt="charlie" />
-      <div id="bg"></div>
-    </div>
+    <div id="container">
+      <!-- Main -->
+      <div id="main">
+        <header id="header">
+          <h1>43 technologies</h1>
+          <p id="message"></p>
+        </header>
+        <div id="contents">
+          <img id="charlie" src="assets/images/charlie.png" alt="charlie" />
+        </div>
+      </div>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <ul class="icons">
-        <li class="icon">
-          <a href="mailto:support@43tec.com"><i class="fas fa-envelope"></i></a>
-        </li>
-        <li class="icon">
-          <a href="https://twitter.com/kouariga"
-            ><i class="fab fa-twitter"></i
-          ></a>
-        </li>
-        <li>
-          <i class="fas fa-map-marker-alt"></i>
-          Seattle
-        </li>
-      </ul>
-      <ul class="copyright">
-        <li>&copy;2019 43 technologies, inc.</li>
-      </ul>
-    </footer>
+      <!-- Footer -->
+      <footer>
+        <ul class="icons">
+          <li class="icon">
+            <a href="mailto:support@43tec.com"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </li>
+          <li class="icon">
+            <a href="https://twitter.com/kouariga"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            Seattle
+          </li>
+        </ul>
+        <ul class="copyright">
+          <li>&copy;2019 43 technologies, inc.</li>
+        </ul>
+      </footer>
+    </div>
     <script>
-      typeChars();
+      typeMessage();
     </script>
   </body>
 </html>
