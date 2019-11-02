@@ -12,27 +12,27 @@ const sleep = milliseconds => {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
 };
 
-const typeChars = async (message_id = 0, cursor = 0) => {
+const typeMessage = async (message_id = 0, cursor = 0) => {
   const message = MESSAGES[message_id];
   if (cursor < message.length) {
     document.getElementById("message").innerHTML += message.charAt(cursor);
-    setTimeout(typeChars, TYPESPEED, message_id, cursor + 1);
+    setTimeout(typeMessage, TYPESPEED, message_id, cursor + 1);
   } else {
     await sleep(TYPESLEEP);
-    deleteChars(message_id);
+    deleteMessage(message_id);
   }
 };
 
-const deleteChars = async message_id => {
+const deleteMessage = async message_id => {
   let currentMessage = document.getElementById("message").innerHTML;
   if (currentMessage.length > 0) {
     document.getElementById("message").innerHTML = currentMessage.substring(
       0,
       currentMessage.length - 1
     );
-    setTimeout(deleteChars, DELETESPEED, message_id);
+    setTimeout(deleteMessage, DELETESPEED, message_id);
   } else {
     await sleep(DELETESLEEP);
-    typeChars((message_id + 1) % MESSAGES.length, 0);
+    typeMessage((message_id + 1) % MESSAGES.length, 0);
   }
 };
