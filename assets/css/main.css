@@ -68,10 +68,6 @@ body {
     #container {
       width: 1200px;
       padding: 5em 5em 3em 5em; } }
-  @media (min-width: 1800px) {
-    #container {
-      width: 1800px;
-      padding: 5em 6em 4em 6em; } }
 
 #header h1 {
   font-family: "Poiret One", cursive;
@@ -91,9 +87,6 @@ body {
   @media (min-width: 1200px) {
     #header h1 {
       font-size: 5em; } }
-  @media (min-width: 1800px) {
-    #header h1 {
-      font-size: 6em; } }
 
 #message {
   min-height: 2.4em;
@@ -113,9 +106,6 @@ body {
   @media (min-width: 1200px) {
     #message {
       font-size: 2.5em; } }
-  @media (min-width: 1800px) {
-    #message {
-      font-size: 3em; } }
 
 #contents {
   display: -moz-flex;
@@ -145,9 +135,6 @@ body {
   #charlie {
     width: 150px; } }
 @media (min-width: 1200px) {
-  #charlie {
-    width: 180px; } }
-@media (min-width: 1800px) {
   #charlie {
     width: 180px; } }
 

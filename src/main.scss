@@ -133,10 +133,6 @@ body {
     width: $bp-md-lg;
     padding: 5em 5em 3em 5em;
   }
-  @include for-big-desktop-up {
-    width: $bp-lg-xl;
-    padding: 5em 6em 4em 6em;
-  }
 }
 
 #header h1 {
@@ -157,9 +153,6 @@ body {
   @include for-desktop-up {
     font-size: 5em;
   }
-  @include for-big-desktop-up {
-    font-size: 6em;
-  }
 }
 
 #message {
@@ -179,9 +172,6 @@ body {
   }
   @include for-desktop-up {
     font-size: 2.5em;
-  }
-  @include for-big-desktop-up {
-    font-size: 3em;
   }
 }
 
@@ -206,9 +196,6 @@ body {
     width: 150px;
   }
   @include for-desktop-up {
-    width: 180px;
-  }
-  @include for-big-desktop-up {
     width: 180px;
   }
 }
