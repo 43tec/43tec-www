@@ -131,12 +131,6 @@ body {
 @media (min-width: 600px) {
   #charlie {
     width: 150px; } }
-@media (min-width: 900px) {
-  #charlie {
-    width: 150px; } }
-@media (min-width: 1200px) {
-  #charlie {
-    width: 180px; } }
 
 /* Footer */
 footer .icons {
