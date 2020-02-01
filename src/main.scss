@@ -131,9 +131,6 @@ body {
   @include for-desktop-up {
     width: $bp-md-lg;
   }
-  @include for-big-desktop-up {
-    width: $bp-lg-xl;
-  }
 }
 
 #header h1 {
@@ -176,9 +173,6 @@ body {
   @include for-desktop-up {
     font-size: 3em;
   }
-  @include for-big-desktop-up {
-    font-size: 3em;
-  }
 }
 
 #contents {
@@ -198,15 +192,6 @@ body {
   }
   @include for-tablet-portrait-up {
     width: 150px;
-  }
-  @include for-tablet-landscape-up {
-    width: 150px;
-  }
-  @include for-desktop-up {
-    width: 180px;
-  }
-  @include for-big-desktop-up {
-    width: 180px;
   }
 }
 
