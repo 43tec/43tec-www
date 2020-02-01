@@ -115,70 +115,66 @@ body {
   @include for-phone-portrait-only {
     width: 100%;
     min-width: 320px;
-    padding: 5em 1.25em 1.25em 1.25em;
+    padding: 1em 1.25em 1.25em 1.25em;
   }
   @include for-phone-landscape-only {
-    height: auto;
-    padding: 5em 1.25em 1.25em 1.25em;
+    width: 100%;
+    padding: 1em 1.25em 1em 1.25em;
   }
   @include for-tablet-portrait-up {
     width: $bp-xs-sm;
-    padding: 5em 2.5em 2em 2.5em;
+    padding: 1em 2em 1em 2em;
   }
   @include for-tablet-landscape-up {
     width: $bp-sm-md;
-    padding: 5em 4em 2em 4em;
   }
   @include for-desktop-up {
     width: $bp-md-lg;
-    padding: 5em 5em 3em 5em;
   }
   @include for-big-desktop-up {
     width: $bp-lg-xl;
-    padding: 5em 6em 4em 6em;
   }
 }
 
 #header h1 {
   font-family: "Poiret One", cursive;
-  margin: 0.5em 0;
+  margin: 0em;
   @include for-phone-portrait-only {
-    font-size: 2.4em;
+    font-size: 1.8em;
   }
   @include for-phone-landscape-only {
-    font-size: 2.4em;
+    font-size: 1.8em;
   }
   @include for-tablet-portrait-up {
-    font-size: 3em;
-  }
-  @include for-tablet-landscape-up {
-    font-size: 4em;
+    font-size: 2em;
   }
   @include for-desktop-up {
-    font-size: 5em;
-  }
-  @include for-big-desktop-up {
-    font-size: 6em;
+    font-size: 2.2em;
   }
 }
 
 #message {
   min-height: 2.4em;
-  margin: 0.5em 0;
+  position: absolute;
+  top: 40%;
+  margin: 0em;
   @include for-phone-portrait-only {
-    font-size: 1.2em;
+    margin-left: 0.2em;
+    font-size: 1.4em;
   }
   @include for-phone-landscape-only {
-    font-size: 1.2em;
+    margin-left: 0.2em;
+    font-size: 1.6em;
   }
   @include for-tablet-portrait-up {
-    font-size: 1.5em;
-  }
-  @include for-tablet-landscape-up {
+    margin-left: 0.5em;
     font-size: 2em;
   }
-  @include for-desktop-up {
+  @include for-tablet-landscape-up {
     font-size: 2.5em;
+  }
+  @include for-desktop-up {
+    font-size: 3em;
   }
   @include for-big-desktop-up {
     font-size: 3em;
@@ -189,6 +185,7 @@ body {
   @include flex;
   @include flex-direction(column);
   @include align-items(center);
+  @include justify-content(center);
 }
 
 #charlie {
@@ -216,7 +213,7 @@ body {
 /* Footer */
 footer .icons {
   list-style: none;
-  margin: 0 0 0.5em 0;
+  margin: 0;
   padding: 0;
 }
 
