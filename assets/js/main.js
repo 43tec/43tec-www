@@ -1,7 +1,7 @@
 const MESSAGES = [
   "We make software for everyone.",
-  "We drive digital transformation.",
-  "We value sustainability."
+  "We drive digital transformations.",
+  "We value sustainable solutions."
 ];
 const TYPESPEED = 40;
 const TYPESLEEP = 2000;
