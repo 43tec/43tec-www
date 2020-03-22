@@ -68,20 +68,20 @@ body {
       width: 1200px; } }
 
 #header h1 {
-  font-family: "Poiret One", cursive;
-  margin: 0em; }
+  margin: 0em;
+  font-weight: 400; }
   @media (max-width: 599px) and (orientation: portrait) {
     #header h1 {
-      font-size: 1.8em; } }
+      font-size: 1.6em; } }
   @media (max-height: 599px) and (orientation: landscape) {
     #header h1 {
-      font-size: 1.8em; } }
+      font-size: 1.6em; } }
   @media (min-width: 600px) {
     #header h1 {
-      font-size: 2em; } }
+      font-size: 1.8em; } }
   @media (min-width: 1200px) {
     #header h1 {
-      font-size: 2.2em; } }
+      font-size: 2em; } }
 
 #message {
   min-height: 2.4em;
