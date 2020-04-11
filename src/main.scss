@@ -150,51 +150,6 @@ body {
   }
 }
 
-#message {
-  min-height: 2.4em;
-  position: absolute;
-  top: 40%;
-  margin: 0em;
-  @include for-phone-portrait-only {
-    margin-left: 0.2em;
-    font-size: 1.4em;
-  }
-  @include for-phone-landscape-only {
-    margin-left: 0.2em;
-    font-size: 1.6em;
-  }
-  @include for-tablet-portrait-up {
-    margin-left: 0.5em;
-    font-size: 2em;
-  }
-  @include for-tablet-landscape-up {
-    font-size: 2.5em;
-  }
-  @include for-desktop-up {
-    font-size: 3em;
-  }
-}
-
-#contents {
-  @include flex;
-  @include flex-direction(column);
-  @include align-items(center);
-  @include justify-content(center);
-}
-
-#charlie {
-  @include for-phone-portrait-only {
-    width: 120px;
-  }
-  @include for-phone-landscape-only {
-    width: 120px;
-    margin-bottom: 100px;
-  }
-  @include for-tablet-portrait-up {
-    width: 150px;
-  }
-}
-
 /* Footer */
 footer .icons {
   list-style: none;
