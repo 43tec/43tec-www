@@ -76,6 +76,8 @@ header {
 
 #logo {
   color: #0b1013;
+  font-size: 1.6em;
+  line-height: 2.4em;
   text-decoration: none; }
 
 #menu-toggle {
