@@ -209,16 +209,18 @@ header a {
     color: #0b1013; }
 
   #menu li {
-    border-bottom: none; }
+    border-bottom: none;
+    margin-left: 2px; }
 
   #menu li:first-child a {
-    border-top: none; }
+    border-top: none;
+    margin-left: 0; }
 
   #menu ul a:hover,
   #menu ul a:focus {
     background: #434343;
     background: rgba(0, 0, 0, 0.2);
-    border-radius: 0.5em; } }
+    border-radius: 0.1em; } }
 /* main */
 #main {
   display: -moz-flex;
