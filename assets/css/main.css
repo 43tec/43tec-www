@@ -74,6 +74,9 @@ header {
   -ms-align-items: baseline;
   align-items: baseline; }
 
+header a {
+  -webkit-tap-highlight-color: transparent; }
+
 #logo {
   color: #0b1013;
   font-size: 1.6em;

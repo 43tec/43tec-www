@@ -140,6 +140,10 @@ header {
   @include align-items(baseline);
 }
 
+header a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 #logo {
   color: $black;
   font-size: 1.6em;
