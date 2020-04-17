@@ -1,26 +1,75 @@
+/*
+color scheme
+https://nipponcolors.com/
+*/
+
 $gofun: #fffffb;
 $kurotsurubami: #0b1013;
 $keshizumi: #434343;
 
+/*
+responsive mixins
+https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
+*/
+
+$bp-xs-sm: 600px;
+$bp-sm-md: 900px;
+$bp-md-lg: 1200px;
+$bp-lg-xl: 1800px;
+
+@mixin for-phone-only {
+  @media (max-width: $bp-xs-sm - 1px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: $bp-xs-sm) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: $bp-sm-md) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: $bp-md-lg) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: $bp-lg-xl) {
+    @content;
+  }
+}
+
 /* flex box mixins */
+
 @mixin flex {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
 }
+
 @mixin flex-direction($property) {
   -moz-flex-direction: $property;
   -webkit-flex-direction: $property;
   -ms-flex-direction: $property;
   flex-direction: $property;
 }
+
 @mixin justify-content($property) {
   -moz-justify-content: $property;
   -webkit-justify-content: $property;
   -ms-justify-content: $property;
   justify-content: $property;
 }
+
 @mixin align-items($property) {
   -moz-align-items: $property;
   -webkit-align-items: $property;
@@ -32,11 +81,13 @@ $keshizumi: #434343;
 box sizing configuration
 https://css-tricks.com/box-sizing/
 */
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -52,9 +103,14 @@ body {
   @include flex;
   @include flex-direction(column);
   @include justify-content(space-between);
-  height: 100%;
+  @include for-phone-only {
+    padding: 0 8px 0 8px;
+  }
+  @include for-tablet-portrait-up {
+    padding: 0 16px 0 16px;
+  }
+  min-height: 100vh;
   margin: 0;
-  padding: 8px 16px 8px 16px;
   color: $kurotsurubami;
   background-color: $gofun;
   font-family: "Noto Sans JP", sans-serif;

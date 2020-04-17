@@ -1,4 +1,5 @@
 const handleClickLanding = () => {
+  console.log("landing clicked");
   const content = document.getElementsByClassName("content")[0];
   const landingTemplate = document.getElementById("landingTemplate");
   const landing = document.importNode(landingTemplate.content, true);
@@ -6,6 +7,7 @@ const handleClickLanding = () => {
 };
 
 const handleClickCompany = () => {
+  console.log("company clicked");
   const content = document.getElementsByClassName("content")[0];
   const companyTemplate = document.getElementById("companyTemplate");
   const company = document.importNode(companyTemplate.content, true);

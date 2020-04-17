@@ -1,3 +1,11 @@
+/*
+color scheme
+https://nipponcolors.com/
+*/
+/*
+responsive mixins
+https://itnext.io/writing-media-queries-with-sass-mixins-3ea591ea3ea4
+*/
 /* flex box mixins */
 /*
 box sizing configuration
@@ -30,12 +38,19 @@ body {
   -webkit-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
-  padding: 8px 16px 8px 16px;
   color: #0b1013;
   background-color: #fffffb;
   font-family: "Noto Sans JP", sans-serif; }
+  @media (max-width: 599px) {
+    html,
+    body {
+      padding: 0 8px 0 8px; } }
+  @media (min-width: 600px) {
+    html,
+    body {
+      padding: 0 16px 0 16px; } }
 
 table {
   border-collapse: collapse; }
