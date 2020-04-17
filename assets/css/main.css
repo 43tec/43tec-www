@@ -23,7 +23,18 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit; }
 
-/* main */
+/* screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+/* overall */
 html,
 body {
   display: -moz-flex;
@@ -52,43 +63,158 @@ body {
     body {
       padding: 0 16px 0 16px; } }
 
-table {
-  border-collapse: collapse; }
-
-table,
-td {
-  border: 1px solid #434343;
-  padding: 16px; }
-
-table td:first-child {
-  font-weight: bold; }
-
 /* header */
 header {
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  -moz-flex-direction: row;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -moz-justify-content: space-between;
-  -webkit-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-  -moz-align-items: center;
-  -webkit-align-items: center;
-  -ms-align-items: center;
-  align-items: center; }
+  -moz-align-items: baseline;
+  -webkit-align-items: baseline;
+  -ms-align-items: baseline;
+  align-items: baseline; }
 
-header a {
-  color: inherit;
+#logo {
+  color: #0b1013;
   text-decoration: none; }
 
-header nav a {
-  margin-left: 12px; }
+#menu-toggle {
+  display: inline-block;
+  padding: 0.75em 16px 0.75em 0;
+  line-height: 1em;
+  font-size: 1em;
+  color: #0b1013;
+  box-shadow: none; }
 
+#menu-toggle:hover,
+#menu-toggle:focus {
+  color: #434343; }
+
+#menu {
+  position: absolute;
+  display: none;
+  left: -200px;
+  top: 0;
+  height: 100%;
+  overflow-y: hidden;
+  transition: left 0.3s ease, box-shadow 0.3s ease;
+  z-index: 999; }
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 2.5em 0 0;
+  /* hide shadow while closed */
+  -webkit-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: -8px 0 8px rgba(0, 0, 0, 0.5);
+  min-height: 100%;
+  width: 200px;
+  background: #1a1a1a; }
+
+#menu a {
+  display: block;
+  padding: 0.75em 15px;
+  line-height: 1em;
+  font-size: 1em;
+  color: #fffffb;
+  text-decoration: none; }
+
+#menu li {
+  border-bottom: 1px solid #434343; }
+
+#menu li:first-child a {
+  border-top: 1px solid #434343; }
+
+#menu ul a:hover,
+#menu ul a:focus {
+  background: #434343; }
+
+#menu-close {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+#menu:target,
+#menu[aria-expanded="true"] {
+  display: block;
+  left: 0;
+  outline: none;
+  -moz-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25);
+  box-shadow: 3px 0 12px rgba(0, 0, 0, 0.25); }
+
+#menu:target #menu-close,
+#menu[aria-expanded="true"] #menu-close {
+  z-index: 1001; }
+
+#menu:target ul,
+#menu[aria-expanded="true"] ul {
+  position: relative;
+  z-index: 1000; }
+
+#menu:target + #backdrop,
+#menu[aria-expanded="true"] + #backdrop {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: #434343;
+  background: rgba(0, 0, 0, 0.8);
+  cursor: default; }
+
+@supports (position: fixed) {
+  #menu,
+  #menu:target + #backdrop,
+  #menu[aria-expanded="true"] + #backdrop {
+    position: fixed; } }
+@media (min-width: 600px) {
+  header {
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between; }
+
+  #menu-toggle,
+  #menu,
+  #menu #menu-close {
+    display: none; }
+
+  #menu {
+    position: relative;
+    left: auto;
+    top: auto;
+    height: auto;
+    display: block; }
+
+  #menu ul {
+    display: flex;
+    padding: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    height: auto;
+    width: auto;
+    background: none; }
+
+  #menu a {
+    color: #0b1013; }
+
+  #menu li {
+    border-bottom: none; }
+
+  #menu li:first-child a {
+    border-top: none; }
+
+  #menu ul a:hover,
+  #menu ul a:focus {
+    background: #434343;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em; } }
+/* main */
 #main {
   display: -moz-flex;
   display: -webkit-flex;
@@ -106,5 +232,16 @@ header nav a {
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center; }
+
+table {
+  border-collapse: collapse; }
+
+table,
+td {
+  border: 1px solid #434343;
+  padding: 16px; }
+
+table td:first-child {
+  font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */
