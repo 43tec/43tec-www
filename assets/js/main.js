@@ -1,5 +1,4 @@
 const handleClickLanding = () => {
-  console.log("landing clicked");
   const content = document.getElementsByClassName("content")[0];
   const landingTemplate = document.getElementById("landingTemplate");
   const landing = document.importNode(landingTemplate.content, true);
@@ -7,7 +6,6 @@ const handleClickLanding = () => {
 };
 
 const handleClickCompany = () => {
-  console.log("company clicked");
   const content = document.getElementsByClassName("content")[0];
   const companyTemplate = document.getElementById("companyTemplate");
   const company = document.importNode(companyTemplate.content, true);
@@ -21,9 +19,7 @@ window.onload = () => {
     handleClickLanding();
   });
 
-  document.getElementById("projectsNav").addEventListener("click", event => {
-    console.log("projects cilcked!");
-  });
+  document.getElementById("projectsNav").addEventListener("click", event => {});
 
   document.getElementById("companyNav").addEventListener("click", event => {
     handleClickCompany();
