@@ -153,7 +153,6 @@ body {
 #main {
   @include flex;
   @include flex-direction(column);
-  @include align-items(flex-start);
   @include justify-content(space-between);
   min-height: 100vh;
   padding: 0 16px 0 16px;
