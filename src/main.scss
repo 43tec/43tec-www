@@ -126,6 +126,10 @@ body {
   min-height: 100vh;
 }
 
+p {
+  line-height: 1.4;
+}
+
 /* background */
 #background {
   position: fixed;
@@ -150,6 +154,7 @@ body {
 }
 
 /* main */
+
 #main {
   @include flex;
   @include flex-direction(column);
@@ -167,6 +172,13 @@ header {
 
 header a {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* footer */
+
+footer {
+  @include flex;
+  @include justify-content(center);
 }
 
 #logo {
