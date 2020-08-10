@@ -110,6 +110,15 @@ html {
 }
 
 body {
+  @include flex;
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @include for-phone-only {
+    padding: 0 24px 0 24px;
+  }
+  @include for-tablet-portrait-up {
+    padding: 0 32px 0 32px;
+  }
   min-height: 100vh;
 }
 
@@ -117,21 +126,17 @@ p {
   line-height: 1.5;
 }
 
-/* main */
-
-#main {
-  @include flex;
-  @include flex-direction(column);
-  @include justify-content(space-between);
-  min-height: 100vh;
-  padding: 0 32px 0 32px;
-}
-
 /* header */
 
 header {
   @include flex;
   @include align-items(baseline);
+  @include for-phone-only {
+    padding: 16px 0 16px 0;
+  }
+  @include for-tablet-portrait-up {
+    padding: 24px 0 24px 0;
+  }
 }
 
 header a {
@@ -141,7 +146,6 @@ header a {
 #logo {
   color: $black;
   font-size: 1.5em;
-  line-height: 3em;
   text-decoration: none;
 }
 
