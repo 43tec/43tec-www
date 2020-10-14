@@ -109,19 +109,6 @@ html {
   min-height: 100vh;
 }
 
-body {
-  @include flex;
-  @include flex-direction(column);
-  @include justify-content(space-between);
-  @include for-phone-only {
-    padding: 0 24px 0 24px;
-  }
-  @include for-tablet-portrait-up {
-    padding: 0 32px 0 32px;
-  }
-  min-height: 100vh;
-}
-
 p {
   line-height: 1.5;
 }
@@ -143,24 +130,33 @@ header a {
   -webkit-tap-highlight-color: transparent;
 }
 
+footer {
+  @include flex;
+  @include justify-content(center);
+}
+
+#page {
+  @include flex;
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @include for-phone-only {
+    padding: 0 24px 0 24px;
+  }
+  @include for-tablet-portrait-up {
+    padding: 0 32px 0 32px;
+  }
+  min-height: 100vh;
+}
+
 #logo {
   color: $black;
   font-size: 1.5em;
   text-decoration: none;
 }
 
-/* content */
-
 #content {
   @include flex;
   @include flex-direction(column);
   @include justify-content(center);
   @include align-items(center);
-}
-
-/* footer */
-
-footer {
-  @include flex;
-  @include justify-content(center);
 }

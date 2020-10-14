@@ -30,27 +30,6 @@ html {
   font-family: "Noto Sans", sans-serif;
   min-height: 100vh; }
 
-body {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -moz-flex-direction: column;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -moz-justify-content: space-between;
-  -webkit-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-  min-height: 100vh; }
-  @media (max-width: 599px) {
-    body {
-      padding: 0 24px 0 24px; } }
-  @media (min-width: 600px) {
-    body {
-      padding: 0 32px 0 32px; } }
-
 p {
   line-height: 1.5; }
 
@@ -74,12 +53,42 @@ header {
 header a {
   -webkit-tap-highlight-color: transparent; }
 
+footer {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center; }
+
+#page {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  min-height: 100vh; }
+  @media (max-width: 599px) {
+    #page {
+      padding: 0 24px 0 24px; } }
+  @media (min-width: 600px) {
+    #page {
+      padding: 0 32px 0 32px; } }
+
 #logo {
   color: #0b1013;
   font-size: 1.5em;
   text-decoration: none; }
 
-/* content */
 #content {
   display: -moz-flex;
   display: -webkit-flex;
@@ -97,16 +106,5 @@ header a {
   -webkit-align-items: center;
   -ms-align-items: center;
   align-items: center; }
-
-/* footer */
-footer {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  -moz-justify-content: center;
-  -webkit-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center; }
 
 /*# sourceMappingURL=main.css.map */
